@@ -43,12 +43,11 @@ export default function Home() {
             </button>
           </form>
           <Carousel autoPlay={true} infiniteLoop={true} showArrows={false} showStatus={false} showIndicators={false} showThumbs={false} className='max-w-xs mt-2 sm:mt-0'>
-              <div>
-                  <img src="https://images-assets.nasa.gov/image/PIA12229/PIA12229~thumb.jpg" width={300}/>
-              </div>
-              <div>
-                  <img src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" width={300}/>
-              </div>
+              <div><img src="/images/examples/example (1).jpeg" width={300}/></div>
+              <div><img src="/images/examples/example (2).jpeg" width={300}/></div>
+              <div><img src="/images/examples/example (3).jpeg" width={300}/></div>
+              <div><img src="/images/examples/example (4).jpeg" width={300}/></div>
+              <div><img src="/images/examples/example (5).jpeg" width={300}/></div>
           </Carousel>
 
         </section>
