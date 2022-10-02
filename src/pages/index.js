@@ -3,6 +3,11 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 export default function Home() {
+
+  const generateImageHandler = () => {
+    window.location.href = '/foxyimage'; 
+  }
+
   return (
     <div className='flex flex-col min-h-screen justify-between bg-fox-pattern'>
       <Head>
@@ -23,7 +28,7 @@ export default function Home() {
             <input type="text" className='border-2 outline-0 w-[30rem] px-3 py-1 my-1 text-xl focus:border-cetys-yellow'/>
             <p>An unique result each time</p>
 
-            <button className='text-xl font-semibold bg-anemia-yellow px-6 py-1 rounded-sm mt-6 transform hover:scale-105'>
+            <button className='text-xl font-semibold bg-anemia-yellow px-6 py-1 rounded-sm mt-6 transform hover:scale-105' onClick={generateImageHandler}>
               GENERATE MY FOXY IMAGE
             </button>
           </div>

@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <div className="p-5">
       <div className="flex flex-row items-center w-full justify-between p">
-        <Link href="">
+        <Link href="/">
           <a className="flex flex-row items-center transform hover:scale-105">
             <img src={"/images/icono_1.png"} width={100} />
             <span className="font-bold text-4xl">
@@ -38,12 +38,12 @@ export default function Header() {
         </button>
         <h1 className="font-bold py-7 pb-3 text-2xl">MENU</h1>
         <div className="flex flex-col w-44 gap-y-4 text-2xl">
-          <Link href="">
+          <Link href="/">
             <a className="hover:underline">
               Home
             </a>
           </Link>
-          <Link href="">
+          <Link href="/about">
             <a className="hover:underline">
               About Us
             </a>

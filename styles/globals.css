@@ -28,6 +28,18 @@
         border-bottom: 60px solid #fff49c;
         z-index: -1;
     }
+    .circle-decoration::before {
+        content: "";
+        position: absolute;
+        left: calc(50% - 30px);
+        top: -10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 999px;
+        background: #fff49c;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
 
     .bg-fox-pattern {
         background-repeat: repeat;
