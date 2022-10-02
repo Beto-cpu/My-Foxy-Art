@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Header from '../components/header';
 import Footer from '../components/footer';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
 export default function Home() {
 
   const generateImageHandler = () => {
@@ -22,17 +25,25 @@ export default function Home() {
         <div className='relative'>
           <h1 className='font-bold text-2xl mb-9 square-decoration'>IMAGE GENERATOR</h1>
         </div>
-        <section className='flex flex-row gap-x-10 items-center justify-start'>
+        <section className='flex flex-col-reverse md:flex-row gap-x-10 gap-y-7 items-center justify-start px-2'>
           <div className='flex flex-col items-start'>
             <p className='font-bold text-xl'>INTRODUCE YOUR SEARCH</p>
             <input type="text" className='border-2 outline-0 w-[30rem] px-3 py-1 my-1 text-xl focus:border-cetys-yellow'/>
-            <p>An unique result each time</p>
+            <p>A unique result each time</p>
 
             <button className='text-xl font-semibold bg-anemia-yellow px-6 py-1 rounded-sm mt-6 transform hover:scale-105' onClick={generateImageHandler}>
               GENERATE MY FOXY IMAGE
             </button>
           </div>
-          <img width={300} src='https://images-assets.nasa.gov/image/PIA12229/PIA12229~thumb.jpg'/>
+          <Carousel autoPlay={true} infiniteLoop={true} showArrows={false} showStatus={false} showIndicators={false} showThumbs={false} className='max-w-xs mt-2 sm:mt-0'>
+              <div>
+                  <img src="https://images-assets.nasa.gov/image/PIA12229/PIA12229~thumb.jpg" width={300}/>
+              </div>
+              <div>
+                  <img src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" width={300}/>
+              </div>
+          </Carousel>
+
         </section>
       </main>
 

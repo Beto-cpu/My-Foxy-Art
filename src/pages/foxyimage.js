@@ -20,23 +20,25 @@ export default function FoxyImage() {
         <div className='relative'>
           <h1 className='font-bold text-2xl mb-9 triangle-decoration'>MY FOXY IMAGE</h1>
         </div>
-        <section className='flex flex-col gap-x-10 items-center justify-start'>
-          <img width={300} src='https://images-assets.nasa.gov/image/PIA12229/PIA12229~thumb.jpg'/>
+        <section className='flex flex-col gap-x-10 items-center justify-start px-1'>
+          <div className='max-w-sm'>
+            <img src='https://images-assets.nasa.gov/image/PIA12229/PIA12229~thumb.jpg'/>
+          </div>
           <span>Original</span>
-          <h2 className='font-bold text-3xl'>MY RANDOM TITLE</h2>
+          <h2 className='font-bold text-2xl sm:text-3xl'>MY RANDOM TITLE</h2>
 
           <div className='flex flex-col gap-y-3 items-center mt-6'>
-            <div className='flex flex-row items-center gap-x-4 py-2 pl-6 pr-6 text-white font-semibold bg-[#D1415A]'>
-              <FiDownload size={27} />
+            <div className='hover:cursor-pointer transform hover:scale-105 rounded flex flex-row items-center gap-x-4 py-2 pl-6 pr-6 text-white font-semibold bg-[#D1415A]'>
+              <FiDownload className="text-[27px] sm:text-[27px]" />
               <span>DOWNLOAD</span>
             </div>
-            <div className='flex flex-row gap-x-10'>
-              <div className='flex flex-row items-center gap-x-4 py-2 pl-6 pr-6 text-white font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'>
-                <FiInstagram size={27} />
+            <div className='flex flex-col sm:flex-row gap-x-10 w-full gap-y-3'>
+              <div className='hover:cursor-pointer transform hover:scale-105 rounded flex flex-row items-center gap-x-4 py-2 pl-6 pr-6 text-white font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'>
+                <FiInstagram className="text-[27px] sm:text-[27px]" />
                 <span>SHARE</span>
               </div>
-              <div className='flex flex-row items-center gap-x-4 py-2 pl-6 pr-6 text-white font-semibold bg-blue-500'>
-                <FiFacebook size={27} />
+              <div className='hover:cursor-pointer transform hover:scale-105 rounded flex flex-row items-center gap-x-4 py-2 pl-6 pr-6 text-white font-semibold bg-blue-500'>
+                <FiFacebook className="text-[27px] sm:text-[27px]" />
                 <span>SHARE</span>
               </div>
             </div>

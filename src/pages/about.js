@@ -19,9 +19,9 @@ export default function FoxyImage() {
        
         <section className='flex flex-col items-center justify-center my-28'>
           <div className='relative'>
-            <h1 className='font-bold text-2xl mb-9 circle-decoration'>About Us</h1>
+            <h1 className='font-bold text-3xl mb-9 circle-decoration'>About Us</h1>
           </div>
-          <p className='max-w-3xl text-xl'>
+          <p className='max-w-3xl text-lg md:text-2xl px-2 text-center'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac sodales lectus. Cras viverra et eros vulputate lacinia. Donec pulvinar, orci id auctor semper, augue nunc suscipit tortor.
           </p>
         </section>
