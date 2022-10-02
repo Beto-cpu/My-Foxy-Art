@@ -1,11 +1,18 @@
 import Head from 'next/head'
 import Header from '../components/header';
 import Footer from '../components/footer';
+import { useRouter } from 'next/router';
 
 import { FiFacebook, FiInstagram, FiDownload } from 'react-icons/fi';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { useEffect, useState } from 'react';
 
 
 export default function FoxyImage() {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(true);
+  const [url, setUrl] = useState('')
+
   return (
     <div className='flex flex-col min-h-screen justify-between bg-fox-pattern'>
       <Head>
@@ -22,7 +29,9 @@ export default function FoxyImage() {
         </div>
         <section className='flex flex-col gap-x-10 items-center justify-start px-1'>
           <div className='max-w-sm'>
-            <img src='https://images-assets.nasa.gov/image/PIA12229/PIA12229~thumb.jpg'/>
+            { router.query.q &&
+              <img src={ 'http://127.0.0.1:5000/generateImage?key=' + router.query.q } onLoad={()=>{setIsLoading(false)}}/>
+            }
           </div>
           <span>Original</span>
           <h2 className='font-bold text-2xl sm:text-3xl'>MY RANDOM TITLE</h2>
@@ -44,9 +53,16 @@ export default function FoxyImage() {
             </div>
           </div>
         </section>
+
+        {isLoading && <div className='flex items-center justify-center w-screen h-full bg-white absolute top-24 sm:top-32 z-100 p-1'>
+          <AiOutlineLoading3Quarters size={90} className="text-cetys-yellow animate-spin"/>
+        </div>}
       </main>
 
       <Footer />
+
+
+      
     </div>
   )
 }
