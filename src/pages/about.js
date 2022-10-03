@@ -22,7 +22,8 @@ export default function FoxyImage() {
             <h1 className='font-bold text-3xl mb-9 circle-decoration'>About Us</h1>
           </div>
           <p className='max-w-3xl text-lg md:text-2xl px-2 text-center'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac sodales lectus. Cras viverra et eros vulputate lacinia. Donec pulvinar, orci id auctor semper, augue nunc suscipit tortor.
+          Foxcoding is a subdivision of FoxRobotics, a representative team at CETYS Universidad for engineering-related competitions, primarily for robotics and programming matters.<br/><br/>
+          FoxRobotics, with a trajectory of more than 10 years, this team has represented CETYS Universidad in countless regional, national and international competitions, with new members being added each year.
           </p>
         </section>
         <section className='mt-6 flex flex-col items-center w-full max-w-5xl px-5'>
